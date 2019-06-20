@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_nombre"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_apellido"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_nombre"
+                tools:ignore="MissingConstraints" />
+
+            <ImageButton
+                android:id="@+id/img_btn_editar"
+                android:layout_width="40dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:onClick="onClick_editar"
+                app:layout_constraintStart_toEndOf="@+id/tv_apellido"
+                app:srcCompat="@drawable/ic_edit"
+                tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+            <ImageButton
+                android:id="@+id/img_btn_borrar"
+                android:layout_width="40dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:onClick="onClick_borrar"
+                app:layout_constraintStart_toEndOf="@+id/img_btn_editar"
+                app:srcCompat="@drawable/ic_delete"
+                tools:ignore="MissingConstraints,VectorDrawableCompat" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
